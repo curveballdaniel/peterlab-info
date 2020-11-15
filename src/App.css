@@ -1,38 +1,319 @@
-.App {
+/* carousel */
+.carousel-root {
+  background: linear-gradient(0deg, rgba(40,53,131,1) 0%, rgba(0,166,229,1) 100%);
+}
+
+.carousel .thumbs {
+  height: 50px;
+}
+
+.carousel .slide {
+  background: none;
+}
+
+.carousel .slide .legend {
+  transition: all .5s ease-in-out;
+  position: absolute;
+  bottom: 40px;
+  left: 80%;
+  margin-left: -45%;
+  width: 30%;
+}
+
+.carousel .thumbs-wrapper {
+  margin: 0;
+  overflow: hidden;
+}
+
+.thumb {
+  height: 50px;
+}
+
+.carousel .thumb img {
+  height: 40px !important;
+  width: 70px !important;
+  vertical-align: top;
+}
+
+/* top navigation */
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-expand .navbar-nav {
+  flex-direction: row;
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* home */
+
+
+/* card-header */
+.card-header {
+  padding: .75rem 1.25rem;
+  margin-bottom: 0;
+  color: white !important;
+  background-color: #00a6e5 !important;
+  border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.tab-list {
+  background: #00a6e5;
+  line-height: 75px;
+  font-size: 26px;
+  font-weight: 500;
+  border-bottom:5px solid #283583;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+}
+
+.tab-list > a {
+  border: none;
+  color:#fff;
+  background:#283583;
+  border-radius:0;
+  flex: 1;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navlink.active {
+  border: none;
+  padding: 18px 25px;
+  color:#fff;
+  background:#00a6e5;
+  border-radius:0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: white !important;
+  background-color: #00a6e5 !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-tabs .nav-link {
+  border-top: 1px solid #283583 !important;
+  border-bottom: 1px solid #283583 !important;
+  border-right: 1px solid white !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+nav > .nav.nav-link{
+
+  border: none;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+
+}
+nav > div a.nav-item.nav-link,
+nav > div a.nav-item.nav-link.active
+{
+  border: none;
+    padding: 18px 25px;
+    color:#fff;
+    background:#272e38;
+    border-radius:0;
+}
+
+nav > div a.nav-item.nav-link.active:after
+ {
+  content: "";
+  position: relative;
+  bottom: -60px;
+  left: -10%;
+  border: 15px solid transparent;
+  border-top-color: #e74c3c ;
+}
+.tab-content{
+  background: linear-gradient(0deg, rgba(215,62,152,0.15) 0%, rgba(255,255,255,1) 50%, rgba(215,62,152,0.15) 100%);
+  line-height: 25px;
+  border: 1px solid #ddd;
+  border-top:5px solid black;
+  border-bottom:5px solid black;
+  padding:30px 25px;
+}
+
+nav > div a.nav-item.nav-link:hover,
+nav > div a.nav-item.nav-link:focus
+{
+  border: none;
+    background: #e74c3c;
+    color:#fff;
+    border-radius:0;
+    transition:background 0.20s linear;
+}
+
+
+/* about sections - research */
+.section-title {
+  padding-bottom: 12px;
+}
+
+.about-text p {
+  color: #505050;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* publications section */
+.publication-date {
+  font-size: 12px;
+  color: #b2b2b2;
+}
+
+.publication-title {
+  padding-left: 5px;
+}
+
+.publication-authors {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.publication-extra {
+
+}
+
+.publication-wrapper {
+  padding: 10px 10px 10px 10px
+}
+
+/* publications page */
+
+.slight-title-padding {
+  padding-top: 16px
+}
+
+/* flip card css */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: white;
+  color: black;
+  transform: rotateY(180deg);
+}
+
+/* flip card top */
+
+.flip-card-back .flip-card-back-top {
+  background-color: #00a1e7;
+  color: black;
+  height: 25%;
+}
+
+.flip-card-back-top h3 {
+  font-weight: 700;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flip-card-margin {
+  padding-top: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.flip-card-back-top span {
+  color: white;
+  font-size: 18px;
+}
+
+/* flip card middle */
+
+.flip-card-back .flip-card-back-middle {
+  background-color: white;
+
+  height: auto;
+  max-height: 65%;
+  overflow: hidden;
+}
+
+.flip-card-back-middle ul {
+  padding: 10px 5px 0px 5px;
+  margin: 0;
+}
+
+.flip-card-back-middle li {
+  list-style: none;
+
+  font: 200 15px/1.5 Helvetica, Verdana, sans-serif;
+  border-bottom: 1px solid #ccc;
+}
+
+.flip-card-back-middle li:last-child {
+  border: none;
+}
+
+.flip-card-back-middle li p {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 0;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+.flip-card-back-middle li p:hover {
+  font-size: 20px;
+  background: #f6f6f6;
+}
+
+.flip-card-back-middle p {
+  color: black;
+}
+
+/* flip card bottom */
+.flip-card-back .flip-card-back-bottom {
+  background-color: pink;
+  color: black;
+  height: 10%;
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
 }
