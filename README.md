@@ -1,3 +1,16 @@
+## An Important Self-reminder:
+
+In order to correctly deploy the site, the following must be done:
+
+```
+yarn build
+firebase deploy
+```
+
+This will probably require signing into firebase through the console, with `firebase login`. It is attached to the 56th email.
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
