@@ -35,7 +35,6 @@ class FlipCard extends React.Component {
               </div>
               <div className="flip-card-back-bottom">
                 View {this.props.firstName} at:
-                  <a href="#"><i className="fab fa-linkedin"></i></a>
               </div>
             </div>
           </div>

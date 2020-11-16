@@ -53,83 +53,86 @@ class MadeTabs extends Component {
       <div>
         <HomeCarousel />
         <div className="tabs col-xs-12">
-          <Navbar className="flex" bg="dark" variant="dark" fixed="top">
-            <Nav justify className="m-auto">
-              <NavDropdown title="Home" id="nav-dropdown">
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                    changeTab('home')
-                    waitForId('research-interests')
-                  }}>Our Research Interests</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                    changeTab('home')
-                    waitForId('other-news')
-                  }}>In Other News</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                    changeTab('home')
-                    waitForId('related-pages')
-                  }}>Related Pages</NavDropdown.Item>
-              </NavDropdown>
-              <NavDropdown title="Research" id="nav-dropdown">
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('research')
-                  waitForId('ibd-title')
-                }}>Inflammatory bowel disease (IBD)</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('research')
-                  waitForId('systems-approach-ibd-title')
-                }}>Systems Biology Approach to IBD</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('research')
-                  waitForId('meconium-study-title')
-                }}>MECONIUM Study</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('research')
-                  waitForId('cardiovascular-title')
-                }}>Cardiovascular Disease</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('research')
-                  waitForId('craniosynostosis-title')
-                }}>Craniosynostosis Network</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link componentclass={Button} onClick={function() {
-                  changeTab('people')
-                  waitForId('people-title')
-                }}>People</Nav.Link>
-              <NavDropdown title="Publications" id="nav-dropdown">
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('publications')
-                  waitForId('obesity-diabetes-etc')
-                }}>Obesity, diabetes, and cardiovascular disease</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('publications')
-                  waitForId('craniosynostosis')
-                }}>Craniosynostosis</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('publications')
-                  waitForId('inflammatory-bowel-disease')
-                }}>Inflammatory Bowel Disease</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('publications')
-                  waitForId('microbiome')
-                }}>Microbiome</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('publications')
-                  waitForId('ashkenazi-jewish-genetics')
-                }}>Ashkenazi Jewish Genetics</NavDropdown.Item>
-                <NavDropdown.Item componentclass={Button} onClick={function() {
-                  changeTab('publications')
-                  waitForId('other-topics')
-                }}>Other Topics</NavDropdown.Item>
-              </NavDropdown>
-              <Nav.Link componentclass={Button} onClick={function() {
-                  changeTab('jobs')
-                  waitForId('job-title')
-                }}>Jobs</Nav.Link>
-              <Nav.Link componentclass={Button} onClick={function() {
-                  changeTab('contact')
-                  waitForId('contact-title')
-                }}>Contact</Nav.Link>
-            </Nav>
+          <Navbar className="flex" expand="lg" bg="dark" variant="dark" fixed="top">
+            <Navbar.Toggle aria-controls="basic-navbar-nav"></Navbar.Toggle>
+            <Navbar.Collapse className="flex" id="basic-navbar-nav">
+              <Nav justify className="m-auto">
+                <NavDropdown title="Home" id="nav-dropdown">
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                      changeTab('home')
+                      waitForId('research-interests')
+                    }}>Our Research Interests</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                      changeTab('home')
+                      waitForId('other-news')
+                    }}>In Other News</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                      changeTab('home')
+                      waitForId('related-pages')
+                    }}>Related Pages</NavDropdown.Item>
+                </NavDropdown>
+                <NavDropdown title="Research" id="nav-dropdown">
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('research')
+                    waitForId('ibd-title')
+                  }}>Inflammatory Bowel Disease (IBD)</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('research')
+                    waitForId('systems-approach-ibd-title')
+                  }}>Systems Biology Approach to IBD</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('research')
+                    waitForId('meconium-study-title')
+                  }}>MECONIUM Study</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('research')
+                    waitForId('cardiovascular-title')
+                  }}>Cardiovascular Disease</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('research')
+                    waitForId('craniosynostosis-title')
+                  }}>Craniosynostosis Network</NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link componentclass={Button} onClick={function() {
+                    changeTab('people')
+                    waitForId('people-title')
+                  }}>People</Nav.Link>
+                <NavDropdown title="Publications" id="nav-dropdown">
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('publications')
+                    waitForId('obesity-diabetes-etc')
+                  }}>Obesity, Diabetes, and Cardiovascular</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('publications')
+                    waitForId('craniosynostosis')
+                  }}>Craniosynostosis</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('publications')
+                    waitForId('inflammatory-bowel-disease')
+                  }}>Inflammatory Bowel Disease</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('publications')
+                    waitForId('microbiome')
+                  }}>Microbiome</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('publications')
+                    waitForId('ashkenazi-jewish-genetics')
+                  }}>Ashkenazi Jewish Genetics</NavDropdown.Item>
+                  <NavDropdown.Item componentclass={Button} onClick={function() {
+                    changeTab('publications')
+                    waitForId('other-topics')
+                  }}>Other Topics</NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link componentclass={Button} onClick={function() {
+                    changeTab('jobs')
+                    waitForId('job-title')
+                  }}>Jobs</Nav.Link>
+                <Nav.Link componentclass={Button} onClick={function() {
+                    changeTab('contact')
+                    waitForId('contact-title')
+                  }}>Contact</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
           </Navbar>
           <Tabs className="tab-list" activeKey={this.state.key} onSelect={this.changeTab} id="uncontrolled-tab-example">
             <Tab eventKey="home" title="Home">
